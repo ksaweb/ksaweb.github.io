@@ -40,7 +40,7 @@ article img{ /*размер изображений слайдера*/
 #switch5:checked ~ #controls label:nth-child(4){
 	background: url(prev.png) no-repeat; /*заливка фона картинкой без повторений*/
 	float: left;
-	margin: 0 0 0 -84px; /*сдвиг влево*/
+
 	display: block;
 	height: 68px;
 	width: 68px;
@@ -54,7 +54,7 @@ article img{ /*размер изображений слайдера*/
 #switch5:checked ~ #controls label:nth-child(1){
 	background: url(next.png) no-repeat; /*заливка фона картинкой без повторений*/
 	float: right;
-	margin: 0 -84px 0 0; /*сдвиг вправо*/
+	
 	display: block;
 	height: 68px;
 	width: 68px;
@@ -140,4 +140,3 @@ label, a{ /*при наведении на стрелки или переклю�
 #controls label{ /*прозрачность стрелок при отводе курсора*/
 	transition: opacity 0.2s ease-out;
 }
-
