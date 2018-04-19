@@ -34,6 +34,7 @@ body{
  	padding-top:30px;
  } 
 .footer {
+	width:auto;
 	padding: 2rem 0;
 	background-color: #14141a;
 	color: #fff;
