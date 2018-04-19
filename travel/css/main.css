@@ -60,10 +60,12 @@ body{
 	font-size: 1.3rem;
 
 }
-
+ .navig{
+	font-size:24px;
+}
 .icons__social a {
-        font-size: 26px;
-    margin: 0 50px 0 0px;
+        font-size: 20px;
+    margin: 0 50px 0 0;
     color: #D3D3D3;
  }
 
