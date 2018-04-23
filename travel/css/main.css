@@ -1,145 +1,34 @@
-.header {
-	height:500px;
-	
-	background: url('../img/13.jpg') no-repeat center;
-	background-size: cover;
-	text-align: center;
-	color: #fff;
+.header{height:500px;background:url('../img/13.jpg') no-repeat center;background-size:cover;text-align:center;color:#fff;}
+body{margin-top:0;background:url('../img/wallpapers3.jpg') no-repeat center;background-attachment:fixed;}
+.block{padding:1rem;margin-bottom:2rem;background-color:#fff;border-radius:$border-radius;box-shadow:0 1px 2px rgba(0,0,0,.5);}
+.pagination a{color:black;padding:8px 16px;}
+.container{padding-top:20px;}
+h4{padding-top:30px;}
+.footer{width:auto;padding:2rem 0;background-color:#14141a;color:#fff;margin-top:3rem;}
+.copyright{padding:1rem;background-color:#0e0e13;color:#6a6a73;text-align:center;}
+.contacts{text-align:center;}
+.navbar{padding-top:0;padding-bottom:20px;}
+.nav-item{margin:0 20px;font-size:1.3rem;}
+.navig{font-size:24px;}
+.icons__social a{font-size:20px;margin:0 50px 0 0;color:#D3D3D3;}
+.fa-facebook:hover{color:#043A6B;}
+.fa-instagram:hover{color:#492A83;}
+.fa-youtube:hover{color:#F80012;}
+.fa-twitter:hover{color:#408DD2;}
+.fa-linkedin:hover{color:#fff;}
+.fa-telegram:hover{color:#1E90FF;}
+li{list-style-type:none;}
+.nav-link{display:inline-block;position:relative;text-decoration:none;}
+.nav-link::before{display:block;position:absolute;content:"";height:2px;width:0;background-color:red;transition:width .5s ease-in-out, left .5s ease-in-out;left:50%;bottom:0;}
+.nav-link::after{display:block;position:absolute;content:"";height:2px;width:0;background-color:red;transition:width .5s ease-in-out;left:50%;bottom:0;}
+.nav-link:hover::before{width:50%;left:0;}
+.nav-link:hover::after{width:50%;}
+@media (max-width:1199px){.display-2{font-size:3.5rem;}
+.display-3{font-size:3.5rem;}
 }
-body{
-	margin-top: 0;
-	background: url('../img/wallpapers3.jpg') no-repeat center;
-	background-attachment: fixed;
-
+@media (max-width:991px){.display-2{font-size:3rem;}
+.display-3{font-size:3rem;}
 }
-.block
-{
-	padding: 1rem;
-	margin-bottom: 2rem;
-	background-color: #fff;
-	border-radius: $border-radius;
-	box-shadow: 0 1px 2px rgba(0,0,0,.5);
-}
-.pagination a {
-    color: black;
-    padding: 8px 16px;}
- .container
- {
- 	padding-top: 20px;
-	
- }
- 
- 
- h4 {
- 	padding-top:30px;
- } 
-.footer {
-	width:auto;
-	padding: 2rem 0;
-	background-color: #14141a;
-	color: #fff;
-	margin-top: 3rem;
-}
-.copyright 
-{
-	padding: 1rem;
-	background-color: #0e0e13;
-	color: #6a6a73;
-	text-align: center;
-
-}
-.contacts {
-	text-align: center;
-}
-
-.navbar {
-	padding-top: 0;
-	padding-bottom: 20px;
-}
-.nav-item {
-	margin:0 20px;
-	font-size: 1.3rem;
-
-}
- .navig{
-	font-size:24px;
-}
-.icons__social a {
-        font-size: 20px;
-    margin: 0 50px 0 0;
-    color: #D3D3D3;
- }
-
- .fa-facebook:hover{
-    color: #043A6B;
-}
-.fa-instagram:hover {
-    color: #492A83;
-}
-.fa-youtube:hover {
-    color: #F80012;
-}
-.fa-twitter:hover {
-    color: #408DD2;
-}
-.fa-linkedin:hover {
-    color: #fff;
-}
-.fa-telegram:hover {
-    color: #1E90FF;
-}
-li {
-    list-style-type: none; /* Убираем маркеры */
-   }
-
-.nav-link {
-   display: inline-block;
-   position: relative;
-   text-decoration: none;
-}
-.nav-link::before{
-   display: block;
-   position: absolute;
-   content: "";
-   height: 2px;
-   width: 0;
-   background-color: red;
-   transition: width .5s ease-in-out, left .5s ease-in-out;
-   left: 50%;
-   bottom: 0;
-}
-.nav-link::after{
-   display: block;
-   position: absolute;
-   content: "";
-   height: 2px;
-   width: 0;
-   background-color: red;
-   transition: width .5s ease-in-out;
-   left: 50%;
-   bottom: 0;
-}
-.nav-link:hover::before{
-   width: 50%;
-   left: 0;
-}
-.nav-link:hover::after{
-   width: 50%;
-}
-
-
-
-
-@media (max-width: 1199px) {
-	.display-2 {font-size: 3.5rem;}
-	.display-3 {font-size: 3.5rem;}
-}
-@media (max-width: 991px) {
-	.display-2 {font-size: 3rem;}
-	.display-3 {font-size: 3rem;}
-}
-@media (max-width: 767px) {
-
-	.display-2 {font-size: 2rem;}
-	.display-3 {font-size: 2rem;}
+@media (max-width:767px){.display-2{font-size:2rem;}
+.display-3{font-size:2rem;}
 }
