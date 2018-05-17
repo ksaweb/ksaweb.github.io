@@ -1,0 +1,135 @@
+
+// function viewDiv(){
+//   document.getElementById("companies").style="display:block";
+// };
+
+
+// заміна на компанію з списку
+var p = document.getElementById('title2');
+var p2 = document.getElementById('name_right');
+function f1() { p.innerHTML = 'КОНКУРЕНТ 1' 
+                p2.innerHTML = 'КОНКУРЕНТ 1'}
+function f2() { p.innerHTML = 'КОНКУРЕНТ 2' 
+                p2.innerHTML = 'КОНКУРЕНТ 2'}
+function f3() { p.innerHTML = 'КОНКУРЕНТ 3' 
+                p2.innerHTML = 'КОНКУРЕНТ 3'}
+function f4() { p.innerHTML = 'КОНКУРЕНТ 4' 
+                p2.innerHTML = 'КОНКУРЕНТ 4'}
+function f5() { p.innerHTML = 'КОНКУРЕНТ 5' 
+                p2.innerHTML = 'КОНКУРЕНТ 5'}
+
+
+
+
+
+ // var l,r, z;
+ //    r = document.getElementById('input_right').value;
+ //    z = document.getElementById('input_hrn');
+ //    function f8 () {
+ //    if (r>1) {
+ //      z.innerHTML = 'sgs;gj';
+ //    }
+ //  }
+
+
+ // Розрахунок
+function f9() {
+
+  var e = document.getElementById('input_left').value;
+  var ee = document.getElementById('input_right').value;
+  var d = document.getElementById('input_hrn_left');
+  var dd = document.getElementById('input_hrn_right');
+  var s = document.getElementById('suma');
+  var proz = document.getElementById('economy');
+  var row = document.getElementById('row');
+  var row2 = document.getElementById('row2');
+  
+  e = parseInt(e);
+  ee = parseInt(ee);
+   
+  var res1 = e*9;
+  var res2 = ee*18;
+  var res3=res2-res1;
+  var res4=res2*100/res1;
+  res4=parseInt(res4);
+
+  d.innerHTML = res1+ 'грн'
+  dd.innerHTML = res2+ 'грн' 
+  s.innerHTML = res3+ ' грн'
+  proz.innerHTML = res4+ ' %'
+  if (res2<res1) {
+    document.getElementById("row").style="display:none"
+    document.getElementById("row2").style="display:block"
+  }
+  else if (e<1) {
+    document.getElementById("error1").style="display:block"
+  }
+  else if (ee<1) {
+    document.getElementById("error2").style="display:block"
+  }
+}
+
+// розгортання/згортання вікна з компаніями + інпути
+$(document).ready(function(){
+ 	$('.btn_dn').click(function (){
+ 		 $(this).parent().children('.companies').slideDown();
+ 		 $(this).parent().children('.btn_up').slideDown();
+  		return false;
+ 	});
+	 $('.btn_up').click(function (){
+ 		 $(this).parent().children('.companies').slideUp();
+ 		 $(this).parent().children('.btn_up').slideUp();
+  		return false;
+	 });
+	 $('.names').click(function f6 (){
+ 		 $('.companies').slideUp();
+ 	 	$('.btn_up').slideUp();
+  		$('.input').slideDown();
+   	 });
+   	 $('.central_btn').click(function f7 (){
+ 		 
+ 	 	$('.modal').slideDown();
+    $('.close').slideDown();
+
+   	 });
+     $('.close').click(function f8 (){
+     
+    $('.modal').slideUp();
+    $('.close').slideUp();
+     });
+   	
+   	 
+});
+
+
+
+// ввід цифр з кнопок
+$(document).ready(function () {
+
+    // VARIABLES
+    var calc = $('.calculator');
+    // var calcDisplay1 = calc.find('.input_left');
+    var calcDisplay = calc.find('.input_right');
+    var calcKeys = calc.find('.calculator__key');
+    var calcButton = calc.find('.func');
+    var calcSpace = calc.find('.calculator__backspace');
+
+    // INIT CALC KEYS
+    calcKeys.each(function () {
+        var current = $(this).attr('value');
+        $(this).text(current);
+    });
+
+   
+     // ADD NUMBERS TO INPUT
+    calcButton.on('click', function () {
+        calcDisplay.val( calcDisplay.val() + $(this).attr('value') );
+    });
+
+     // BACKSPACE BUTTON
+    calcSpace.on('click', function () { // https://www.w3schools.com/jsref/jsref_substring.asp
+        calcDisplay.val( calcDisplay.val().substring(0, calcDisplay.val().length-1) );
+    });
+    
+   
+});

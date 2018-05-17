@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="1.js" defer></script>
+
+</head>
+
+<body>
+		<img class="menu" src="img/menu_icon.png" alt="">
+		<p class="header">
+		РОЗРАХУЙТЕ ВАРТІСТЬ
+		</p>
+	<div class="content">
+		<div class="left">
+			<img src="img/pack1.png" alt="">
+			<p class="title"> <b>НАШІ ЛІКИ</b></p>
+		</div>
+		<div id="error1">
+			Неможливе значення <br>
+			<i class="fa fa-exclamation-circle"></i> 
+		</div>
+		<div id="error2">
+			Неможливе значення <br>
+			<i class="fa fa-exclamation-circle"></i> 
+		</div>
+		<div class="right">
+			<img src="img/pack2.png" alt="">
+			<p class="title2" id="title2">ОБЕРІТЬ КОМПАНІЮ</p>
+			<div id="btn_dn" class="btn_dn" >
+				<a href=""  >
+					<img src="img/dn_button.png" alt="button">
+				</a> 
+			</div>
+			<div class="companies" id="companies" >
+				<ul >
+					<li class="names" onclick="f1(); f6(); ">
+						<img class="arrow" src="https://png.icons8.com/ios/50/ffffff/circled-chevron-right-filled.png">
+						<p>
+							КОНКУРЕНТ 1
+						</p>
+					</li>
+					<hr color="#0d467d">
+					<li class="names" onclick="f2();f6(); ">
+						<img class="arrow" src="https://png.icons8.com/ios/50/ffffff/circled-chevron-right-filled.png">
+						<p>
+							КОНКУРЕНТ 2
+						</p>
+					</li>
+					<hr color="#0d467d" ">
+					<li class="names" onclick="f3();f6(); ">
+						<img class="arrow" src="https://png.icons8.com/ios/50/ffffff/circled-chevron-right-filled.png">
+						<p>
+							КОНКУРЕНТ 3
+						</p>
+					</li>
+					<hr color="#0d467d">
+					<li class="names" onclick="f4();f6(); ">
+						<img class="arrow" src="https://png.icons8.com/ios/50/ffffff/circled-chevron-right-filled.png">
+						<p>
+							КОНКУРЕНТ 4
+						</p>
+					</li>
+					<hr color="#0d467d" ">
+					<li class="names" onclick="f5();f6(); f9();">
+						<img class="arrow" src="https://png.icons8.com/ios/50/ffffff/circled-chevron-right-filled.png">
+						<p>
+							КОНКУРЕНТ 5
+						</p>
+					</li>
+					<hr color="#0d467d">
+				</ul>
+			</div>
+			<div class="btn_up ">
+				<a href="">
+					<img  src="img/up_button.png" alt="button">
+				</a>
+			</div>	
+		</div>
+	</div>
+
+	<div class="calculator">
+
+		<button class="central_btn" onclick="f9() ">
+			РОЗРАХУВАТИ КУРС	
+		</button>
+			
+		<div class="modal">
+			
+			<div class="close " onclick="f8() >
+				<a href="">
+					<img  src="img/close_button.png" alt="button">
+				</a>
+			</div>
+
+			<div class="price">
+				<i class="fa fa-caret-left"></i> Ціна курсу <i class="fa fa-caret-right"></i>
+			</div>
+			<div class="first">
+				<div class="colom left_colom">
+					<p>
+					<b>№30 </b> <br>
+					Курс лікування 3 місяці<br>
+					по <b>1 таблетці</b> 3 рази на добу<br>
+					</p>
+					<div>
+				 		<p id="input_hrn_left">  </p>
+					</div>
+
+					<p class="package_name"> <b>НАШІ ЛІКИ</b></p>
+
+					<div type="text" id="input_number" >
+						x9 шт.
+					</div>
+					<img class="package" src="img/package1.png" alt="">
+				</div>
+				<div class="colom right_colom">
+						<p>
+						<b>№30 </b> <br>
+						Курс лікування 3 місяці<br>
+						по <b>2 таблетці</b> 3 рази на добу<br>
+						</p>
+						
+					<div>
+						<p id="input_hrn_right">  </p>
+					</div>
+
+					<div type="text" id="input_number" >
+						x18 шт.
+					</div>
+
+					<p style="color:#ffe8b7;" class="package_name name_right" id="name_right"> <b></b></p>
+					<img class="package" src="img/packsge2.png" alt="">
+				</div>
+			</div>
+			<div class="second ">
+				<div class="row" id="row">
+					<p > <b> Економія для пацієнта з Нашими ліками <span id="suma">1881 грн</span> <span type="text" id="economy"> </span>	 </b>
+					</p>
+				</div>	
+				<div id="row2">
+					<p> Перевірте, можливо Ви допустили помилку при вводі вартості упаковки</p>
+				</div>
+			</div>
+
+		
+    	</div>
+		<div class="calculator__row">
+
+            <input placeholder="Введіть вартість упаковки" class="input input_left" id="input_left" type="text" required> 
+            <input placeholder="Введіть вартість упаковки" class="input input_right" id="input_right" type="text" required>
+
+        </div>
+		<div class="keys">
+			<button class="calculator__key calculator__button func" value="1">
+				1
+			</button>
+			<button class="calculator__key calculator__button func" value="2">
+				2
+			</button>
+			<button class="calculator__key calculator__button func" value="3">
+				3
+			</button>
+			<button class="calculator__key calculator__button func" value="4">
+				4
+			</button>
+			<button class="calculator__key calculator__button func" value="5">
+				5
+			</button>
+			<button class="calculator__key calculator__button func" value="6">
+				6
+			</button>
+			<button class="calculator__key calculator__button func" value="7">
+				7
+			</button>
+			<button class="calculator__key calculator__button func" value="8">
+				8
+			</button>
+			<button class="calculator__key calculator__button func" value="9">
+				9
+			</button>
+			<button class="calculator__key calculator__button func" value="0">
+				0
+			</button>
+			<button class="calculator__key calculator__button func" value=",">
+				,
+			</button>
+			<a href="" value="" class=" func   calculator__backspace">
+				<img height="51" width="74" class="back" src="img/back.png">
+			</a>
+		</div>
+	</div>
+	<div class="sourse">
+		<img class="sourse2"   src="img/source_icon.png" alt="">
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</body>
+</html>
