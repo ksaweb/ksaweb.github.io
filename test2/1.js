@@ -1,12 +1,7 @@
-
-// function viewDiv(){
-//   document.getElementById("companies").style="display:block";
-// };
-
-
 // заміна на компанію з списку
 var p = document.getElementById('title2');
 var p2 = document.getElementById('name_right');
+
 function f1() { p.innerHTML = 'КОНКУРЕНТ 1' 
                 p2.innerHTML = 'КОНКУРЕНТ 1'}
 function f2() { p.innerHTML = 'КОНКУРЕНТ 2' 
@@ -19,20 +14,7 @@ function f5() { p.innerHTML = 'КОНКУРЕНТ 5'
                 p2.innerHTML = 'КОНКУРЕНТ 5'}
 
 
-
-
-
- // var l,r, z;
- //    r = document.getElementById('input_right').value;
- //    z = document.getElementById('input_hrn');
- //    function f8 () {
- //    if (r>1) {
- //      z.innerHTML = 'sgs;gj';
- //    }
- //  }
-
-
- // Розрахунок
+// Розрахунок
 function f9() {
 
   var e = document.getElementById('input_left').value;
@@ -57,15 +39,16 @@ function f9() {
   dd.innerHTML = res2+ 'грн' 
   s.innerHTML = res3+ ' грн'
   proz.innerHTML = res4+ ' %'
-  if (res2<res1) {
-    document.getElementById("row").style="display:none"
-    document.getElementById("row2").style="display:block"
-  }
-  else if (e<1) {
+ 
+  if (e<1) {
     document.getElementById("error1").style="display:block"
   }
   else if (ee<1) {
     document.getElementById("error2").style="display:block"
+  }
+  else if (res2<res1) {
+    document.getElementById("row").style="display:none"
+    document.getElementById("row2").style="display:block"
   }
 }
 
@@ -81,37 +64,60 @@ $(document).ready(function(){
  		 $(this).parent().children('.btn_up').slideUp();
   		return false;
 	 });
-	 $('.names').click(function f6 (){
- 		 $('.companies').slideUp();
- 	 	$('.btn_up').slideUp();
-  		$('.input').slideDown();
-   	 });
-   	 $('.central_btn').click(function f7 (){
- 		 
- 	 	$('.modal').slideDown();
-    $('.close').slideDown();
+	$('.names').click(function f6 (){
+ 		$('.companies').slideUp();
+ 	  $('.btn_up').slideUp();
+  	$('.input').slideDown();
+   	});
 
-   	 });
-     $('.close').click(function f8 (){
-     
+  $('.central_btn').click(function f7 (){
+ 		
+    $('.modal').slideDown();
+    $('.close').slideDown();
+    
+  });
+
+    // $('input').keyup(function(){
+    //   if(($('.input_right').val().length > 0) && ($('.input_left').val().length > 0))
+    //     $(".central_btn").prop('disabled', false);
+    //   else
+    //     $(".central_btn").prop('disabled', true);
+    // });
+
+    // if(name.length != 0 || email.length != 0 ) {
+    //     $('#central_btn').removeAttr('disabled');
+    // }
+    // else {
+    //     $('#central_btn').attr('disabled', 'disabled');
+    // }
+  
+  $('.close').click(function f8 (){
     $('.modal').slideUp();
     $('.close').slideUp();
-     });
-   	
-   	 
+  });
 });
 
-
+// Убираем placeholder при клике по input
+ $(document).ready(function () {
+ $('input').focus(function(){
+   $(this).data('placeholder',$(this).attr('placeholder'))
+   $(this).attr('placeholder','');
+ });
+ $('input').blur(function(){
+   $(this).attr('placeholder',$(this).data('placeholder'));
+ });
+ });
 
 // ввід цифр з кнопок
+
 $(document).ready(function () {
 
     // VARIABLES
     var calc = $('.calculator');
-    // var calcDisplay1 = calc.find('.input_left');
+    var calcDisplay1 = calc.find('.input_left');
     var calcDisplay = calc.find('.input_right');
     var calcKeys = calc.find('.calculator__key');
-    var calcButton = calc.find('.func');
+    var calcButton = calc.find('.calculator__button');
     var calcSpace = calc.find('.calculator__backspace');
 
     // INIT CALC KEYS
@@ -120,16 +126,29 @@ $(document).ready(function () {
         $(this).text(current);
     });
 
-   
      // ADD NUMBERS TO INPUT
     calcButton.on('click', function () {
+      ('input_left').focus(function(){
+ 
+        calcDisplay1.val( calcDisplay1.val() + $(this).attr('value') );
+
+    });
+      ('input_right').focus(function(){
+ 
         calcDisplay.val( calcDisplay.val() + $(this).attr('value') );
+
+    });
     });
 
      // BACKSPACE BUTTON
     calcSpace.on('click', function () { // https://www.w3schools.com/jsref/jsref_substring.asp
-        calcDisplay.val( calcDisplay.val().substring(0, calcDisplay.val().length-1) );
+        calcDisplay.val( calcDisplay.val().slice(0, calcDisplay.val().length-1) );
     });
+
+
+});
+
+
+
     
    
-});

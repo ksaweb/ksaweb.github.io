@@ -53,12 +53,17 @@ body {
 	top: 90px;
 	padding-left: 150px;
 }
-.title2 {
+#title2 {
 	font-size: 20px;
 	color: #ffd6a8;
 	position: absolute;
-	top: 75px;
-	padding-left:65px;	
+	width: 300px;
+	top: 95px;
+	text-align: center;
+}
+#title2 p {
+	padding:0;
+	margin:0;
 }
 .companies {
 	display: none;
@@ -122,15 +127,16 @@ hr {
 	position: absolute;
 	bottom: 180px;
 	background: #fcecd9;
-	font-size: 16px;
+	font-size: 24px;
 	border-radius: 30px;
 	width: 280px;
-	padding: 20px 0 20px 0;
+	padding: 15px 0 15px 0;
 	border:1px solid #d7b997;
 	text-align: center;
 	z-index: 2;
-	color: #2f1505;
+	color: #3b1f0e;
 	outline:none;
+	
 }
 
 .input_left {
@@ -201,7 +207,7 @@ hr {
 	height: 78px;
   	bottom: 0;
   }
-  .sourse2 {
+.sourse2 {
 	padding-left:1191px;
   }
 
@@ -267,7 +273,7 @@ hr {
 #economy {
 	position: absolute;
 	background: #fed5c9;
-	font-size: 48px;
+	font-size: 44px;
 	color: #2f1505;
 	border-radius: 35px;
 	width: 200px;
@@ -277,7 +283,7 @@ hr {
 	right: 0;
 	border: none;
 	margin-left: 20px;
-	
+	font-weight: bolder;
 	outline:none;
 
 }
@@ -387,3 +393,4 @@ hr {
 	font-size: 16px;
 	text-align: center;
 }
+input::-webkit-input-placeholder { font-size: 16px; }
