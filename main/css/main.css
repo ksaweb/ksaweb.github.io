@@ -1,0 +1,311 @@
+/* Спецификация */
+
+body, p {
+    font-family: 'PT Sans', sans-serif;
+    padding:0;
+    margin:0; 
+
+}
+
+ul, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+/* Первый экран */
+
+.header {
+    
+    background-size:cover;
+    color: #010101;
+    
+    height: 205px;
+    
+    position: relative;
+        
+ }
+ .contacts {
+    padding-bottom: 22px;
+ } 
+ 
+ .menu {
+     
+    font-size: 18px;
+     margin-right: 21px;
+     white-space: nowrap; 
+
+ }
+ .line {
+    border-left: 2px solid #ccc; 
+    border-height: 17px;
+   
+    padding-left: 19px;
+ }
+ .first {
+    padding-top: 20px;
+ }
+ .first p{
+    font-weight: bold;
+    font-size: 18px;
+    color: #164260;
+    padding:5px 0 0 2px; 
+    padding-left: 0;
+ }
+ .second {
+    position: absolute;
+    width: 200px;
+    padding-top: 8px;
+ }
+ .moscov {
+    color: #890b19;
+    padding:5px 0 0 15px;
+     font-weight: bold;
+ }
+ .tel {
+    font-size: 18px;
+    color: #164260;
+    position: absolute;
+    bottom: 0px;
+    padding-left: 15px;
+    font-weight: bold;
+    
+ }
+ .zakaz {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0 0 10px;
+ }
+ .fourth {
+    padding-top: 16px;
+    margin-bottom: 0;
+    text-align: center;
+ }
+  .call {
+    background: #890b19;
+    width: 295px;
+    height: 75px;
+    border-radius: 10px; 
+    position: relative;
+    margin-top: 36px;
+    margin-left: 80px;
+ }
+
+ .ellipse {
+    position: absolute;
+    background: #fff; /* Цвет фона */
+    top:-13px;
+    right: 246px;
+    width: 96px; /* Ширина кнопки */
+    height: 96px; /* Высота */
+    border-radius: 48px;
+    z-index: 2;
+ }
+ .ellipse img{
+    padding-top: 18px;
+    padding-left: 20px;
+
+ }
+ .adress {
+    font-size: 15px;
+    
+ }
+ .icons__item  [class*="fa fa-"] {
+    background-color: #192935;
+    border-radius: 30px;
+    color: #fff;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin: 8px 1.5px;
+    width: 30px;
+    font-size: 16px;
+    text-align: center;
+}
+.center {
+    padding-left: 95px;
+}
+.social p{
+    font-size: 18px;
+    color: #164260;
+    padding: 5px 0 0 5px; 
+    font-weight: bold;
+}
+.blue {
+    background: #164260;
+    color: #fff;
+    padding: 25px 0; 
+    
+ }
+
+/*section one */
+.one {
+    position: relative;
+    margin-top: 15px;
+    height: 497px;
+    background:url('../img/Слой 2.png') no-repeat center;
+    background-size:cover;
+}
+ .protection {
+    font-size: 48px;
+    color: #fff;
+    font-weight: bold;
+   
+    padding: 25px 0;
+    background: #264456;
+    opacity: 0.6;
+    
+    top: 150px; 
+    text-align: center; 
+
+}
+.forma {
+    position: relative;
+    background: #890b19;
+    height: 190px;
+    top:245px; 
+    text-align: center;
+    padding: 18px 42px; 
+}
+.name_forma {
+    color: #fcba00;
+    font-size: 32px;
+}
+.question {
+    width: 100%;
+}
+.btn_form {
+    padding:0; 
+    width: 100%;
+    height: 48px;
+    z-index: 4;
+    background: #fcba00; 
+}
+input {
+    height: 48px;
+}
+.name_mail {
+    padding-top: 12px; 
+}
+
+/*two*/
+.two {
+    height: 500px;
+}
+
+
+/*pre_footer*/
+
+.pre_footer {
+    height: 573px;
+    background:#164260; 
+}
+
+/*footer*/
+
+
+.footer {
+    background: #164260;
+    color: #fff;
+}
+.red {
+    background: #890b19;
+}
+.red2 {
+   
+    
+    padding: 40px 0 28px 0;
+
+    
+ }
+ .first_footer {
+    margin-left: 15px;
+    margin-right: -15px;
+ }
+ .first_footer img {
+     margin-top: -12px;
+
+ }
+ .first_footer p{
+    font-weight: bold;
+    font-size: 14px;
+    
+    padding:5px 0 0 2px; 
+    padding-left: 0;
+ }
+ .menu_footer {
+    font-size: 22px;
+     margin-right: 21px;
+     white-space: nowrap;
+
+ }
+ .fourth_footer {
+    padding-top: 13px;
+    margin-left: -20px; 
+    font-size: 13px;
+    text-align: center;
+ }
+ .moscov_footer {
+    font-size: 13px;
+
+    padding:5px 0 0 15px;
+     font-weight: bold;
+ }
+ .social_footer p{
+    font-size: 16px;
+    
+    padding: 5px 0 0 5px; 
+    font-weight: bold;
+}
+ .tel_footer {
+    font-size: 16px;
+    
+    
+    
+    padding-left: 15px;
+    font-weight: bold;
+    
+ }
+.phones {
+    margin-left: -20px;
+    padding-right: 0;
+    padding-top: 12px;
+}
+.icons__item_footer  {
+    padding-left:;
+    
+    font-size: 11px;
+    
+}
+.last_footer {
+    padding-top: 12px;
+    padding-right: 0;
+    margin-left:20px;
+    
+
+}
+
+.icons__item_footer {
+    display: list-item;
+}
+.left_ul {
+    width: 45%;
+}
+.right_ul {
+    width: 50%;
+   padding-left:20px;
+}
+.line_footer {
+    border-left: 2px solid #afc0c9; 
+    height: 130px;
+   margin-left: -20px;
+   padding-right: 20px;
+   margin-top: -10px;
+ }
+ .special {
+    margin-top:-12px;
+ }
